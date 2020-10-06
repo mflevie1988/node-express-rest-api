@@ -1,7 +1,7 @@
 import httpStatus from 'http-status';
-import { ExtendableError } from './ExtendableError.helper';
+import { ExtendableError } from './ExtendableError';
 
-export default class APIError extends ExtendableError {
+export class APIError extends ExtendableError {
   /**
    * Creates an API error.
    * @param {string} message - Error message.
