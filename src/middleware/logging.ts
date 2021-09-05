@@ -3,7 +3,6 @@ import { json, urlencoded } from 'body-parser';
 import logger from '../logger';
 
 const router = express.Router();
-const namespace = 'SERVER';
 
 router.use((req: Request, res: Response, next: NextFunction) => {
   logger.info(`Request - [${req.method}], ${req.url}`);

@@ -42,7 +42,7 @@
     "no-duplicate-imports": "error",
     "no-var": "error",
     "prefer-const": "error",
-    "arrow-body-style": ["error", "as-needed"],
+    "arrow-body-style": ["error", "always"],
     "object-curly-spacing": ["error", "always"],
     "object-shorthand": "off",
     "sort-keys": "off",
