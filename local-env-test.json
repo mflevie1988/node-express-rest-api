@@ -1,0 +1,13 @@
+{
+  "NODE_ENV": "test",
+  "LISTEN_PORT": "4040",
+  "LISTEN_HOST": "localhost",
+  "ALFRESCO_HOST": "10.1.1.132",
+  "ALFRESO_PORT": "8080",
+  "MYSQL_DB_HOST": "localhost",
+  "MYSQL_DB_USERNAME": "root",
+  "CLIENT_DB_USERNAME": "admin",
+  "CLIENT_DB_HOST": "10.1.1.19",
+  "CUPS_HOST": "10.1.1.132",
+  "CUPS_USERNAME": "admin"
+}

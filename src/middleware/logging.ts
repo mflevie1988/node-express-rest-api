@@ -1,20 +1,22 @@
 import express, { Request, Response, NextFunction } from 'express';
-import bodyParser from 'body-parser';
-import logging from '../logs/logging';
+import { json, urlencoded } from 'body-parser';
+import logger from '../logger';
 
 const router = express.Router();
 const namespace = 'SERVER';
 
 router.use((req: Request, res: Response, next: NextFunction) => {
-  logging.info(namespace, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}]`);
+  logger.info(`Request - [${req.method}], ${req.url}`);
 
   res.on('finish', () => {
-    logging.info(namespace, `METHOD - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}], STATUS - [${res.statusCode}]`);
+    logger.info(
+      `RESPONSE - [${req.method}], URL - [${req.url}], IP - [${req.socket.remoteAddress}], STATUS - [${res.statusCode}]`
+    );
   });
   next();
 });
 
-router.use(bodyParser.urlencoded({ extended: false }));
-router.use(bodyParser.json());
+router.use(urlencoded({ extended: false }));
+router.use(json());
 
 export default router;

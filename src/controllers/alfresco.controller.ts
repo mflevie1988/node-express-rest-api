@@ -2,11 +2,11 @@ import { Request, Response } from 'express';
 import { APIError } from '../helpers/errorHandlers/APIError';
 // import { parseString } from 'xml2js';
 import status from 'http-status';
-import config from '../config/config';
+import config from '../config';
 
 export function getAlfrescoAccessTokens(): boolean {
   const error = new APIError('Test Error', status.INTERNAL_SERVER_ERROR);
-  if (config.alfrescoServer.host) {
+  if (config.alfrescoHost) {
     return true;
   }
   return !error;

@@ -3,3 +3,4 @@ node_modules
 dist
 ts-node-*
 .vscode
+local-env-override.json
