@@ -9,7 +9,8 @@
   "scripts": {
     "build": "rm -rf ./dist/ && prettier --write ./src && tsc -p .",
     "start": "npm run build & env-cmd -e common,overrides -r local-env.js node dist/server.js",
-    "dev": "env-cmd -e common,overrides -r nodemon src/server.ts",
+    "start:dist": "node ./dist/server",
+    "dev": "env-cmd -e common,overrides -r local-env.js nodemon src/server.ts",
     "lint": "eslint src/**/*.ts",
     "lint-fix": "eslint src/**/*.ts --fix",
     "format": "prettier --write ./src",
